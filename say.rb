@@ -8,7 +8,6 @@ def say(words='hello')
 end
 
 say()
-say("hello")
 say("hi")
 say("how are you")
 say("I'm fine")
