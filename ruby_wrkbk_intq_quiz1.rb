@@ -1,10 +1,16 @@
 # Exercise 1
-10.times { puts "The Flintstones Rock!" }
-# need to add indent in subsequent lines
-
+10.times { puts "The Flintstones Rock!" } # need to add indent in subsequent lines
+10.times { |number| puts (" " * number) + "The Flintstones Rock!" } # taken from solution
 
 # Exercise 2
 statement = "The Flintstones Rock"
+# taken from solution
+result = {} # create empty hash
+letters = ('A'..'Z').to_a + ('a'..'z').to_a # create two inclusive ranges for caps and lower case alphabet, convert both to object array
+letters.each do |letter| # iterate over value in letters var
+	letter_frequency = statement.scan(letter).count # chain #scan and #count over statement var, store in letter_frequency var
+	result[letter] = letter_frequency if letter_frequency > 0 # store each letter in result hash and add value only if more than one instance exists in statement var
+end
 
 =begin # Exercise 3
 The following statement: puts "the value of 40 + 2 is " + (40 + 2), 
