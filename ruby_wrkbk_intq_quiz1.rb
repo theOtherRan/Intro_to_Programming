@@ -35,4 +35,33 @@ The next code block removes the last element in the array by calling the
 Both methods do not require the use of the bang operator, !.
 =end
 
+# Exercise 5
+while dividend > 0 do
+	divisors << number / dividend if number % dividend == 0
+	dividend -= 1
+end
 
+=begin # Exercise 6
+The first method makes use of the shovel operator, <<, which alters 
+the contents of the buffer argument, while the second method, makes 
+use of + operator to join the 2 arguments together, not altering the 
+argument. 
+
+# Exercise 7
+Adding limit as an argument to the fib method to access it. 
+=end
+
+# Exercise 8
+words.split.map { |word| word.downcase.capitalize }.join(' ')
+
+# Exercise 9
+munsters.each do |name, details|
+	case details["age"]
+	when 0...18
+		details["age_group"] = "kid"
+	when 18...65
+		details["age_group"] = "adult"
+	else
+		details["age_group"] = "senior"
+	end
+end
